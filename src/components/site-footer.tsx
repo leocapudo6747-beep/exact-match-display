@@ -29,13 +29,11 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h4 className="eyebrow text-accent">Navegação</h4>
+            <h4 className="eyebrow text-accent">Coleção · Marcas</h4>
             <ul className="mt-6 space-y-3 text-sm text-primary-foreground/70">
-              <li>
-                <Link to="/" className="transition-colors hover:text-accent">
-                  Início
-                </Link>
-              </li>
+              <li><Link to="/colecao" search={{ marca: "Polo Ralph Lauren" }} className="transition-colors hover:text-accent">Polo Ralph Lauren</Link></li>
+              <li><Link to="/colecao" search={{ marca: "Loro Piana" }} className="transition-colors hover:text-accent">Loro Piana</Link></li>
+              <li><Link to="/colecao" search={{ marca: "Moncler" }} className="transition-colors hover:text-accent">Moncler</Link></li>
               <li>
                 <Link to="/colecao" className="transition-colors hover:text-accent">
                   Coleção
@@ -96,7 +94,7 @@ export function SiteFooter() {
         </div>
 
         <p className="mt-16 border-t border-primary-foreground/15 pt-8 text-center text-xs tracking-wide text-primary-foreground/45">
-          © 2025 Belmont. Todos os direitos reservados. Brasil · Envios para todo o país
+          © 2025 Belmont. Curadoria de importados. Brasil.
         </p>
       </div>
     </footer>
