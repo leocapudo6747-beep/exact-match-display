@@ -23,7 +23,7 @@ const marquee = ["Polo Ralph Lauren", "Lacoste", "Tommy Hilfiger", "Brooks Broth
 const homeCats = ["Camisas", "Polos", "Tricôs", "Jaquetas", "Calçados", "Acessórios"] as const;
 
 function Home() {
-  const destaques = [products[0], products[16], products[25], products[18]];
+  const destaques = [0, 16, 25, 18].map((i) => products[i]).filter((p): p is (typeof products)[number] => !!p);
   const novidades = products.filter((p) => p.isNew);
   const [email, setEmail] = useState("");
   const [done, setDone] = useState(false);

@@ -39,7 +39,7 @@ function Colecao() {
   const [sort, setSort] = useState("new");
 
   const list = useMemo(() => {
-    const r = prices[price];
+    const r = prices[price] ?? prices[0]!;
     const out = products.filter(
       (p) =>
         (brand === "Todas" || p.brand === brand) &&
